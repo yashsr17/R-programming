@@ -1,0 +1,17 @@
+pollutantmean <- function(directory,pollutant, id){
+  # str_pad(charid, 3, pad = "0")
+  data <- data.frame()
+  for(i in id){
+    x <- sprintf("%03d",i)
+    dat <- read.csv(sprintf('....\\Downloads\\specdata\\%s.csv',x))
+    data <- rbind(data , dat)
+  }
+  sum <- mean(data[["sulfate"]],na.rm=TRUE)
+  sum
+}
+
+
+pollutantmean('',"sulfate",1:10)
+
+
+# ouput <- 4.064128
