@@ -3,7 +3,7 @@ corr <- function(directory, threshold){
   for(i in 1:332){
     id <- i
     x <- sprintf("%03d",i)
-    dat <- read.csv(sprintf('C:\\Users\\YASH\\Downloads\\specdata\\%s.csv',x))
+    dat <- read.csv(sprintf('~\\Downloads\\specdata\\%s.csv',x))
     data <- dat[complete.cases(dat),]
     if(nrow(data)>threshold){
       data_vec <- c(data_vec,cor(data["sulfate"], data["nitrate"]))
