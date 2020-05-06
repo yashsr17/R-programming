@@ -4,7 +4,7 @@ complete <- function(directory, id1){
   for(i in id1){
     id <- i
     x <- sprintf("%03d",i)
-    dat <- read.csv(sprintf('C:\\Users\\YASH\\Downloads\\specdata\\%s.csv',x))
+    dat <- read.csv(sprintf('~\\Downloads\\specdata\\%s.csv',x))
     nobs <- sum(complete.cases(dat))
     temp <- data.frame(id,nobs)
     data <- rbind(data,temp)
