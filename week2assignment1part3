@@ -1,4 +1,4 @@
-corr <- function(directory, threshold){
+corr <- function(directory, threshold=0){
   data_vec <- NULL
   for(i in 1:332){
     id <- i
